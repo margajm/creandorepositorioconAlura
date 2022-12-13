@@ -1,0 +1,26 @@
+/*Aplicaremos al primer parrafo, para ello ussaremos la siguiente lógica:
+elemento > hijo
+Aplicar directamente al hijo del main, no a los nietos ni subelementos.*/
+main > p {
+    background:pink;
+  }
+  
+  /*Podemos usar la misma lógica para los hermanos, etc.*/
+  /*Aqui decimos al primer parrafo que viene despues de la imagen aplicame esto.*/
+  img + p {
+    background:yellow;
+  }
+  
+  /*Tambien podemos hacer que nos apliqu a todos los parrafos hasta incluso sobreescribe el estilo anterior.*/
+  img ~ p{
+    background: green;
+  }
+  
+  /*Tambien podemos decirle "todos excepto este, en este caso le diremos excepto el segundo párrafo".
+  Para ello recordamos que todo esta dentro de nuestra section llamada "principal", entonces:*/
+  
+  /*Aplicame celeste a todos los párrafos de la clase principal menos al que tiene el id=mision*/
+  /*Asi evitamos que cambie a celeste y se siga manteniendo en verde el segundo párrafo.*/
+  .principal p:not(#mision){
+    background:skyblue;
+  }
